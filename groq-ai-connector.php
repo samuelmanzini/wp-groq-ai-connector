@@ -40,6 +40,7 @@ function groq_connector_load(): void {
 		add_action( 'admin_notices', static function (): void {
 			global $wp_version;
 			echo '<div class="notice notice-error"><p>';
+			// translators: 1: required WordPress version, 2: current WordPress version.
 			printf(
 				esc_html__( 'Groq AI Connector requires WordPress %1$s or higher. You are running %2$s.', 'groq-ai-connector' ),
 				esc_html( GROQ_CONNECTOR_MIN_WP ),

@@ -66,7 +66,9 @@ class GroqSettings {
 
 			<?php if ( ! $is_configured ) : ?>
 			<div class="notice notice-warning inline">
-				<p><?php printf(
+				<p><?php
+				// translators: 1: opening link tag, 2: closing link tag.
+				printf(
 					esc_html__( 'Chave API nao encontrada. Insira sua Groq API Key em %1$sConfiguracoes > Conectores%2$s.', 'groq-ai-connector' ),
 					'<a href="' . esc_url( $connectors_url ) . '">', '</a>'
 				); ?></p>
@@ -77,7 +79,9 @@ class GroqSettings {
 			</div>
 			<?php endif; ?>
 
-			<p><?php printf(
+			<p><?php
+				// translators: 1: opening link tag, 2: closing link tag.
+				printf(
 				esc_html__( 'A chave API e gerenciada em %1$sConfiguracoes > Conectores%2$s. Escolha aqui qual modelo Groq o WordPress usara por padrao.', 'groq-ai-connector' ),
 				'<a href="' . esc_url( $connectors_url ) . '">', '</a>'
 			); ?></p>
@@ -102,7 +106,9 @@ class GroqSettings {
 								<?php endforeach; ?>
 							</select>
 							<p class="description">
-								<?php printf(
+								<?php
+								// translators: %s: link to Groq models documentation.
+								printf(
 									esc_html__( 'Veja todos os modelos em %s.', 'groq-ai-connector' ),
 									'<a href="https://console.groq.com/docs/models" target="_blank" rel="noopener">console.groq.com/docs/models</a>'
 								); ?>

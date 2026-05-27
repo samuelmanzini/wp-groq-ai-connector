@@ -1,6 +1,6 @@
 === Groq AI Connector ===
 Contributors:      samuelcosta
-Tags:              ai, groq, llama, artificial intelligence, connector, ai provider, text generation
+Tags:              ai, groq, llama, connector, text generation
 Requires at least: 7.0
 Tested up to:      7.0
 Requires PHP:      8.1
