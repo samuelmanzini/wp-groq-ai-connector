@@ -4,7 +4,7 @@ Tags:              ai, groq, llama, connector, text generation
 Requires at least: 7.0
 Tested up to:      7.0
 Requires PHP:      8.1
-Stable tag:        0.2.1
+Stable tag:        0.2.2
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,7 +111,18 @@ Please open an issue at the plugin's GitHub repository or use the WordPress.org 
 
 == Changelog ==
 
-= 2.1.0 =
+= 0.2.2 =
+* Added English (en_US) and Spanish (es_ES) translations.
+* Fixed all Plugin Check i18n errors: text domain, missing translators comments.
+* Registered `load_plugin_textdomain()` on `plugins_loaded` hook.
+* Custom banner and icons for WordPress.org plugin page.
+
+= 0.2.1 =
+* Renamed plugin slug to `groq-ai-connector` (removed `wp-` prefix).
+* Lowered minimum WordPress requirement to 6.7 for broader compatibility.
+* Fixed ZIP packaging to use forward slashes (Linux server compatibility).
+
+= 0.2.0 =
 * Full integration with the PHP AI Client via `AbstractApiProvider`.
 * Added `wpai_preferred_text_models` filter so Groq is used first for text generation.
 * Settings page now shows only model selection (API key moved to Connectors Gallery).
@@ -119,15 +130,17 @@ Please open an issue at the plugin's GitHub repository or use the WordPress.org 
 * Added `GroqProvider`, `GroqProviderAvailability`, `GroqTextGenerationModel`, `GroqModelMetadataDirectory`.
 * API key resolution priority: environment variable → PHP constant → WordPress option.
 
-= 2.0.0 =
-* Rewrote registration to use the correct `wp_connectors_init` hook and `WP_Connector_Registry`.
-* Removed non-existent hooks (`wp_ai_init`, `wp_ai_get_providers`, `wp_ai_providers`).
-* Added model selection dropdown to settings page.
+= 0.1.0 =
+* Full integration with the PHP AI Client via `AbstractApiProvider`.
+* Added `wpai_preferred_text_models` filter so Groq is used first for text generation.
+* Settings page now shows only model selection (API key moved to Connectors Gallery).
+* Autoloader for `src/` classes using PSR-4 convention.
+* Added `GroqProvider`, `GroqProviderAvailability`, `GroqTextGenerationModel`, `GroqModelMetadataDirectory`.
+* API key resolution priority: environment variable → PHP constant → WordPress option.
 
-= 1.1.5 =
-* Initial release — experimental brute-force connector registration.
+* Initial release — experimental connector registration.
 
 == Upgrade Notice ==
 
-= 2.1.0 =
-Major rewrite. Before upgrading, deactivate and delete the old version via WP Admin or FTP. Then install this ZIP fresh. Your API key stored in the Connectors Gallery will be preserved.
+= 0.2.2 =
+Adds English and Spanish translations. No breaking changes — safe to upgrade.

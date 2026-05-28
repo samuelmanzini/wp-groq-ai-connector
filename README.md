@@ -7,7 +7,7 @@
 [![License: GPLv2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Requires WordPress](https://img.shields.io/badge/WordPress-7.0%2B-21759b)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)](https://www.php.net)
-[![Stable tag](https://img.shields.io/badge/version-0.2.1-orange)](https://github.com/samuelmanzini/groq-ai-connector/releases)
+[![Stable tag](https://img.shields.io/badge/version-0.2.2-orange)](https://github.com/samuelmanzini/groq-ai-connector/releases)
 
 ---
 
@@ -113,20 +113,25 @@ Yes. WordPress 7.0 supports multiple configured providers. Groq will be used fir
 
 ## Changelog
 
+### 0.2.2
+- Added English (en_US) and Spanish (es_ES) translations
+- Fixed all Plugin Check i18n errors: text domain, missing translators comments
+- Registered `load_plugin_textdomain()` on `plugins_loaded` hook
+- Custom banner and icons for WordPress.org plugin page
+
 ### 0.2.1
+- Renamed plugin slug to `groq-ai-connector` (removed `wp-` prefix)
+- Fixed ZIP packaging for Linux server compatibility
+- Lowered minimum WordPress to 6.7 for broader compatibility
+
+### 0.2.0
 - Full integration with the PHP AI Client via `AbstractApiProvider`
 - Added `wpai_preferred_text_models` filter so Groq is used first for text generation
-- Settings page now shows only model selection (API key moved to Connectors Gallery)
+- Settings page shows only model selection (API key in Connectors Gallery)
 - Autoloader for `src/` classes using PSR-4 convention
-- Added `GroqProvider`, `GroqProviderAvailability`, `GroqTextGenerationModel`, `GroqModelMetadataDirectory`
-- API key resolution priority: environment variable → PHP constant → WordPress option
+- API key resolution: environment variable → PHP constant → WordPress option
 
-### 2.0.0
-- Rewrote registration to use the correct `wp_connectors_init` hook and `WP_Connector_Registry`
-- Removed non-existent hooks
-- Added model selection dropdown to settings page
-
-### 1.1.5
+### 0.1.0
 - Initial release
 
 ---
