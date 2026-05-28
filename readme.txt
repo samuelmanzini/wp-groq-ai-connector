@@ -4,7 +4,7 @@ Tags:              ai, groq, llama, connector, text generation
 Requires at least: 7.0
 Tested up to:      7.0
 Requires PHP:      8.1
-Stable tag:        0.2.2
+Stable tag:        0.2.3
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,9 @@ Please open an issue at the plugin's GitHub repository or use the WordPress.org 
 3. WordPress AI features (title generation, excerpt) using Groq in the block editor.
 
 == Changelog ==
+
+= 0.2.3 =
+* Fixed 400 Bad Request error when WordPress AI Client sends response_format with json_schema type — Groq requires the json_schema.name field, which is now automatically added when missing.
 
 = 0.2.2 =
 * Added English (en_US) and Spanish (es_ES) translations.

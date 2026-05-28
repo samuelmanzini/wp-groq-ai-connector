@@ -7,7 +7,7 @@
 [![License: GPLv2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Requires WordPress](https://img.shields.io/badge/WordPress-7.0%2B-21759b)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)](https://www.php.net)
-[![Stable tag](https://img.shields.io/badge/version-0.2.2-orange)](https://github.com/samuelmanzini/groq-ai-connector/releases)
+[![Stable tag](https://img.shields.io/badge/version-0.2.3-orange)](https://github.com/samuelmanzini/groq-ai-connector/releases)
 
 ---
 
@@ -112,6 +112,9 @@ Yes. WordPress 7.0 supports multiple configured providers. Groq will be used fir
 ---
 
 ## Changelog
+
+### 0.2.3
+- Fixed 400 error on AI features that use structured output: added automatic `json_schema.name` field when WordPress AI Client omits it (required by Groq API)
 
 ### 0.2.2
 - Added English (en_US) and Spanish (es_ES) translations

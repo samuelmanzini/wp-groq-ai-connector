@@ -3,7 +3,7 @@
  * Plugin Name: Groq AI Connector
  * Plugin URI:  https://wordpress.org/plugins/groq-ai-connector
  * Description: Ultra-fast AI connector for Groq LPU — registers Groq in the WordPress 7.0 Connectors Gallery and PHP AI Client.
- * Version:     0.2.2
+ * Version:     0.2.3
  * Author:      Samuel Costa
  * Author URI:  https://samuel-costa.com
  * License:     GPLv2 or later

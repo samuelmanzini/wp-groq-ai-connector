@@ -23,6 +23,18 @@ class GroqTextGenerationModel extends AbstractOpenAiCompatibleTextGenerationMode
 		unset( $params['n'] );
 		unset( $params['reasoning_effort'] );
 
+		// Groq requires response_format.json_schema.name to be present.
+		if (
+			isset( $params['response_format'] ) &&
+			is_array( $params['response_format'] ) &&
+			( $params['response_format']['type'] ?? '' ) === 'json_schema'
+		) {
+			if ( ! isset( $params['response_format']['json_schema']['name'] ) ||
+				'' === $params['response_format']['json_schema']['name'] ) {
+				$params['response_format']['json_schema']['name'] = 'output';
+			}
+		}
+
 		return $params;
 	}
 
